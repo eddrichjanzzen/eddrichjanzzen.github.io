@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  
+  <head>
+  <meta charset="utf-8">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>React Native: Space Between Styling | Eddrich Janzzen</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="React Native: Space Between Styling" />
+<meta name="author" content="eddrichjanzzen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An article that describes a solution to add equal spacing betweens using React Native Styling." />
+<meta property="og:description" content="An article that describes a solution to add equal spacing betweens using React Native Styling." />
+<link rel="canonical" href="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html" />
+<meta property="og:url" content="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html" />
+<meta property="og:site_name" content="Eddrich Janzzen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-31T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"An article that describes a solution to add equal spacing betweens using React Native Styling.","headline":"React Native: Space Between Styling","dateModified":"2021-07-31T00:00:00+00:00","datePublished":"2021-07-31T00:00:00+00:00","@type":"BlogPosting","url":"https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html"},"author":{"@type":"Person","name":"eddrichjanzzen"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100;400" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/skeleton-alerts.css">
+  <link rel="stylesheet" href="/assets/css/badge.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <!-- for syntax highlighting -->
+  <link rel="stylesheet" href="/assets/css/tango.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- for category filtering-->
+  <script src="/assets/js/jquery-3.1.1.min.js"></script> 
+
+  <meta name="google-site-verification" content="y76HL_x2Anjbw7oIO9lswptVVKHz5NHCzh8Dz9Rp4FI" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171515307-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171515307-1');
+  </script>
+
+  
+</head>
+
+
+<body>
+
+  <header>
+    <nav>
+	
+	<div class="hamburger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	
+	
+	<ul class="clearfix nav-top">
+	<!-- <ul class="open nav-top"> -->
+		<li><a href="/index.html">Home</a></li>
+    <li><a href="/posts">Posts</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="https://github.com/eddrichjanzzen" target="_blank">GitHub</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>
+
+
+<!-- https://www.youtube.com/watch?v=6m6iqN1uynE -->
+
+  </header>
+
+
+  <div class="content-wrapper">
+    <h3>React Native: Space Between Styling</h3>
+<span>Posted on Jul 31, 2021 • eddrichjanzzen
+</span>
+<div>    
+  
+    <a class="badge badge-secondary" href="/posts/tech">
+      <i class="fas fa-tags"></i>
+      tech
+    </a>
+  
+    <a class="badge badge-secondary" href="/posts/react">
+      <i class="fas fa-tags"></i>
+      react
+    </a>
+  
+</div>
+<br>
+
+<div class="blog-wrapper">
+	<h5 id="learn-once-write-anywhere">Learn once, write anywhere.</h5>
+
+<p><a href="https://reactnative.dev/">React Native</a> is an amazing tool for writing cross plaform applications. If you’re thinking about building an application with the the capability to support multiple platforms, then this is the tool for you! <img class="emoji" title=":raised_hands:" alt=":raised_hands:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f64c.png" height="20" width="20"></p>
+
+<p>Recently, I’ve been working on a feature that diplays a list of elements into the view port in a grid-style format. At first, I was able to solve the issue by adding the <code class="language-plaintext highlighter-rouge">grid-gap</code> property to the styles prop like so:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">flexDirection</span><span class="p">:</span> <span class="dl">"</span><span class="s2">row</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">flexWrap</span><span class="p">:</span> <span class="dl">"</span><span class="s2">wrap</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">...</span>
+  <span class="nx">gap</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1.25rem</span><span class="dl">'</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/blog/reactnative-spacebetween/grid-spaced.png" alt="grid-gap" class="img-blog-center"></p>
+
+<p>However as I was implementing tests, I discovered that React Native doesn’t support the usage of <code class="language-plaintext highlighter-rouge">grid-gap</code>.</p>
+
+<p>The test would fail with the following error:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Invariant Violation: <span class="s2">"gap"</span> is not a valid style property.
+
+</code></pre></div></div>
+
+<p>Another solution I tried was to add a <code class="language-plaintext highlighter-rouge">justifyContent: 'space-between'</code>, this fix certainly fixes the issue, but when less elements were displayed in the bottom of the viewport, the spacing would be too far off.</p>
+
+<p><img src="/assets/images/blog/reactnative-spacebetween/grid-spaced-space-between.png" alt="grid-gap" class="img-blog-center"></p>
+
+<p>After another hour of trial and error, I was able to find another way. If you are using the <code class="language-plaintext highlighter-rouge">map</code> function to render your component, you can try the following code:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Change to the number of columns in your grid</span>
+<span class="kd">const</span> <span class="nx">numCols</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="c1">// Change to the spacing for each item</span>
+<span class="kd">const</span> <span class="nx">spacing</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">1.25rem</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">parentStyles</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">flexDirection</span><span class="p">:</span> <span class="dl">"</span><span class="s2">row</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">flexWrap</span><span class="p">:</span> <span class="dl">"</span><span class="s2">wrap</span><span class="dl">"</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">childStyles</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">styles</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">marginBottom</span><span class="p">:</span> <span class="nx">spacing</span><span class="p">,</span>
+    <span class="na">marginLeft</span><span class="p">:</span> <span class="nx">index</span> <span class="o">%</span> <span class="nx">numCols</span> <span class="o">!==</span> <span class="mi">0</span> <span class="p">?</span> <span class="nx">spacing</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="nx">styles</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Parent View</span>
+<span class="p">&lt;</span><span class="nc">View</span> <span class="na">style=</span><span class="si">{</span><span class="nx">parentStyles</span><span class="si">}</span><span class="p">&gt;</span>
+  <span class="si">{</span>
+    <span class="c1">// List of child views to render</span>
+    <span class="nx">contents</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">content</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="c1">// add a margin of 'spacing' to the bottom of all cards</span>
+      <span class="c1">// will supply a left-margin to all cards in between the gap,</span>
+      <span class="c1">// everytime a card is NOT divisible numCols, add a margin to the left</span>
+      <span class="p">&lt;</span><span class="nc">View</span> <span class="na">style=</span><span class="si">{</span><span class="nx">childStyles</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span><span class="si">}</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Card</span> <span class="na">key=</span><span class="si">{</span><span class="nx">index</span><span class="si">}</span> <span class="na">content=</span><span class="si">{</span><span class="nx">content</span><span class="si">}</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;/</span><span class="nc">View</span><span class="p">&gt;</span>
+    <span class="p">))</span>
+  <span class="si">}</span>
+<span class="p">&lt;/</span><span class="nc">View</span><span class="p">&gt;;</span>
+</code></pre></div></div>
+
+<p>The result may be the same, but it certainly fixed the issue. You can configure the grid-gap by changing the <code class="language-plaintext highlighter-rouge">spacing</code> variable. You can also configure the number of columns by changing the <code class="language-plaintext highlighter-rouge">numCol</code> variable.</p>
+
+<p><img src="/assets/images/blog/reactnative-spacebetween/grid-spaced.png" alt="grid-gap" class="img-blog-center"></p>
+
+<p>I hope this article will be of help to anyone who encounters a similar issue. <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> <img class="emoji" title=":thumbsup:" alt=":thumbsup:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+	
+</div>
+
+  <div>
+  
+  <footer>
+    
+<footer class="footer">
+	<nav>
+	
+	
+	<ul class="clearfix nav-bottom">
+	<!-- <ul class="open nav-top"> -->
+		<li><a href="/index.html">Home</a></li>
+    <li><a href="/posts">Posts</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="https://github.com/eddrichjanzzen" target="_blank">GitHub</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>
+
+
+<!-- https://www.youtube.com/watch?v=6m6iqN1uynE -->
+
+	<div class="mini">
+		<img src="/assets/images/me.jpg" alt="">
+		<p>Developed by <a href="https://github.com/eddrichjanzzen">Eddrich Janzzen Ang</a> powered by <a href="https://jekyllrb.com/">Jekyll</a></p>	
+	</div>
+</footer>
+
+
+  <footer>
+
+</footer></footer>
+</div>
+</div></body>
+<script src="/assets/js/main.js"></script>
+</html>
