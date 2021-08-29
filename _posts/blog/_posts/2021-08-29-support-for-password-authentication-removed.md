@@ -6,7 +6,7 @@ date: 2021-08-29
 category: blog
 tags:
   - tech
-description: "An article that describes the fix for the github error where the support for password authentication was removed. The shows the step by step guide to fix the issue for MacOS users"
+description: "An article that describes the fix for the github error where the support for password authentication was removed. The article shows the step by step guide to fix the issue for MacOS users"
 ---
 
 #### Password authentication was removed
