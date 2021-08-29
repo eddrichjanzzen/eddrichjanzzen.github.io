@@ -7,7 +7,7 @@ category: blog
 tags:
   - tech
   - react
-description: "An article that describes a solution to add equal spacing betweens using React Native Styling."
+description: "An article that describes a solution to add equal spacing between views using React Native Styling."
 ---
 
 ##### Learn once, write anywhere.
