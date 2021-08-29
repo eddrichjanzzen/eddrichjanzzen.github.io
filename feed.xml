@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://eddrichjanzzen.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eddrichjanzzen.github.io/" rel="alternate" type="text/html" /><updated>2021-07-31T16:24:36+00:00</updated><id>https://eddrichjanzzen.github.io/feed.xml</id><title type="html">Eddrich Janzzen</title><subtitle>Personal Blog</subtitle><author><name>Eddrich Janzzen Ang</name><email>eddrichang@gmail.com</email></author><entry><title type="html">React Native: Space Between Styling</title><link href="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html" rel="alternate" type="text/html" title="React Native: Space Between Styling" /><published>2021-07-31T00:00:00+00:00</published><updated>2021-07-31T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html">&lt;h5 id=&quot;learn-once-write-anywhere&quot;&gt;Learn once, write anywhere.&lt;/h5&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://eddrichjanzzen.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eddrichjanzzen.github.io/" rel="alternate" type="text/html" /><updated>2021-08-29T09:24:58+00:00</updated><id>https://eddrichjanzzen.github.io/feed.xml</id><title type="html">Eddrich Janzzen</title><subtitle>Personal Blog</subtitle><author><name>Eddrich Janzzen Ang</name><email>eddrichang@gmail.com</email></author><entry><title type="html">Github: Support for password authentication was removed</title><link href="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html" rel="alternate" type="text/html" title="Github: Support for password authentication was removed" /><published>2021-08-29T00:00:00+00:00</published><updated>2021-08-29T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html">&lt;h4 id=&quot;password-authentication-was-removed&quot;&gt;Password authentication was removed&lt;/h4&gt;
+
+&lt;p&gt;Recently, I’ve been trying to clone a repository on &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt;. I ran into an issue where I couldn’t clone the repository because password authentication is no longer supported.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+remote: Support &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more information.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/use-personal-token.png&quot; alt=&quot;github-auth-error&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The error above has to do with a policy change in Github’s security. The support for using regular username and password has been removed and instead been replaced with a personal access token. Click &lt;a href=&quot;https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/&quot;&gt;here&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;p&gt;In this article, I’ll be walking through the steps to take when faced with this error. Note that the steps below are for MacOS users.&lt;/p&gt;
+
+&lt;h4 id=&quot;generating-a-personal-access-token&quot;&gt;Generating a personal access token&lt;/h4&gt;
+
+&lt;p&gt;Follow these steps to generate a personal access token. Make sure to keep note of the generated personal access token as this will be used in the succeeding steps.&lt;/p&gt;
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;1-on-the-github-dashboard-click-on-settings&quot;&gt;1. On the Github dashboard, click on Settings.&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;2-click-on-developer-settings&quot;&gt;2. Click on Developer Settings&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/developer-settings.png&quot; alt=&quot;developer-settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;3-click-on-personal-access-tokens&quot;&gt;3. Click on Personal access tokens&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/personal-access-token.png&quot; alt=&quot;personal-access-tokens&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;4-click-on-generate-new-token&quot;&gt;4. Click on Generate new token&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-new-token.png&quot; alt=&quot;generate-new-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;5-enter-password&quot;&gt;5. Enter password&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/enter-password.png&quot; alt=&quot;enter-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;6-add-a-note-for-the-token-configure-expiry-and-the-allowed-permissions&quot;&gt;6. Add a note for the token, configure expiry and the allowed permissions.&lt;/h5&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;In this example, we are leaving all the persmissions is checked, and with no expiry&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/token-configuration.png&quot; alt=&quot;token-configuration&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;7-click-on-generate-token&quot;&gt;7. Click on Generate Token&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-token-button.png&quot; alt=&quot;generate-token-button&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;8-copy-the-token&quot;&gt;8. Copy the token&lt;/h5&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Copy the token. Store it somewhere safe where only you can access it. You will need this personal token in the next step.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/copy-token.png&quot; alt=&quot;generate-token-button&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;using-the-personal-token-instead-of-password&quot;&gt;Using the Personal Token instead of password&lt;/h4&gt;
+&lt;p&gt;If this is your &lt;strong&gt;first time ever&lt;/strong&gt; to clone a respository in Github then follow these steps. If not, then proceed to the instructions on: Replacing the Credentials in Keychain access, below.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;1-re-clone-the-respository&quot;&gt;1. Re-clone the respository.&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/re-clone.png&quot; alt=&quot;re-clone&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;2-paste-the-personal-access-token-in-the-password-prompt&quot;&gt;2. Paste the personal access token in the password prompt&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/paste-personal-token.png&quot; alt=&quot;paste-personal-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;3-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;3. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/clone-success.png&quot; alt=&quot;clone-success&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;replacing-the-credentials-in-keychain-access&quot;&gt;Replacing the Credentials in Keychain access&lt;/h4&gt;
+
+&lt;p&gt;If you’ve &lt;strong&gt;cloned a few repositories&lt;/strong&gt; before in Github, it’s likely that your credentials are already stored in the Keychain. Follow these steps to configure Keychain Access.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;1-open-keychain-access&quot;&gt;1. Open Keychain access.&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/spotlight-keychain-access.png&quot; alt=&quot;keychain-access&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;2-on-keychain-access-search-git&quot;&gt;2. On Keychain Access, search &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/search-git.png&quot; alt=&quot;search-git&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;3-click-on-githubcom&quot;&gt;3. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.com&lt;/code&gt;&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/click-github.png&quot; alt=&quot;click-github&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;4-tick-the-checkbox-show-password&quot;&gt;4. Tick the checkbox &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show password&lt;/code&gt;.&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/keychain-access-password.png&quot; alt=&quot;keychain-access-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;5-enter-system-password-then-click-on-always-allow&quot;&gt;5. Enter system password, then click on Always allow&lt;/h5&gt;
+
+  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/always-allow.png&quot; alt=&quot;always-allow&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;6-paste-the-token-into-the-password-field&quot;&gt;6. Paste the Token into the password field&lt;/h5&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Copy the token from the previous guide on generating a personal access token. Then paste it in the input as seen below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/paste-token.png&quot; alt=&quot;paste-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;h5 id=&quot;7-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;7. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Re-clone the repository&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/clone-success-keychain-access.png&quot; alt=&quot;clone-succcess-keychain-access&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I hope this article will be of help to anyone who encounters a similar issue. :smile: :thumbsup:&lt;/p&gt;</content><author><name>eddrichjanzzen</name></author><category term="blog" /><category term="tech" /><summary type="html">Password authentication was removed</summary></entry><entry><title type="html">React Native: Space Between Styling</title><link href="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html" rel="alternate" type="text/html" title="React Native: Space Between Styling" /><published>2021-07-31T00:00:00+00:00</published><updated>2021-07-31T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/07/31/spacebetween-react-native-styling.html">&lt;h5 id=&quot;learn-once-write-anywhere&quot;&gt;Learn once, write anywhere.&lt;/h5&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://reactnative.dev/&quot;&gt;React Native&lt;/a&gt; is an amazing tool for writing cross plaform applications. If you’re thinking about building an application with the the capability to support multiple platforms, then this is the tool for you! :raised_hands:&lt;/p&gt;
 
@@ -948,6 +1111,4 @@ botocore.exceptions.NoCredentialsError: Unable to locate credentials
 
 &lt;p&gt;We set our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;environment&lt;/code&gt; as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS_PROFILE=default&lt;/code&gt; so that boto3 will know to read the configuration for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;default&lt;/code&gt; environment. For multiple environments you can configure &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS_PROFILE=&amp;lt;your environment here&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;I hope this article will be of help to anyone who encounters a similar issue. :smile: :thumbsup:&lt;/p&gt;</content><author><name>eddrichjanzzen</name></author><category term="blog" /><category term="tech" /><category term="aws" /><category term="python" /><summary type="html">Boto3: Unable to locate credentials</summary></entry><entry><title type="html">Comming Soon</title><link href="https://eddrichjanzzen.github.io/projects/2020/08/21/CommingSoonA.html" rel="alternate" type="text/html" title="Comming Soon" /><published>2020-08-21T00:00:00+00:00</published><updated>2020-08-21T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/projects/2020/08/21/CommingSoonA</id><content type="html" xml:base="https://eddrichjanzzen.github.io/projects/2020/08/21/CommingSoonA.html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna tellus, consectetur et odio vitae, congue iaculis lacus. Nunc ultrices porttitor massa. Mauris posuere, risus at maximus malesuada, ex diam iaculis lectus, vel posuere diam nunc eget mauris. Phasellus lacinia ex ac nulla viverra tempus. In efficitur tortor lorem, vel laoreet quam pretium ut.&lt;/p&gt;
-
-&lt;p&gt;Website: &lt;a href=&quot;&quot;&gt;https://example.com&lt;/a&gt;&lt;/p&gt;</content><author><name>eddrichjanzzen</name></author><category term="projects" /><category term="web" /><category term="design" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna tellus, consectetur et odio vitae, congue iaculis lacus. Nunc ultrices porttitor massa. Mauris posuere, risus at maximus malesuada, ex diam iaculis lectus, vel posuere diam nunc eget mauris. Phasellus lacinia ex ac nulla viverra tempus. In efficitur tortor lorem, vel laoreet quam pretium ut.</summary></entry></feed>
+&lt;p&gt;I hope this article will be of help to anyone who encounters a similar issue. :smile: :thumbsup:&lt;/p&gt;</content><author><name>eddrichjanzzen</name></author><category term="blog" /><category term="tech" /><category term="aws" /><category term="python" /><summary type="html">Boto3: Unable to locate credentials</summary></entry></feed>
