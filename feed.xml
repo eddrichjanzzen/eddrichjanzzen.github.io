@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://eddrichjanzzen.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eddrichjanzzen.github.io/" rel="alternate" type="text/html" /><updated>2021-08-29T11:51:23+00:00</updated><id>https://eddrichjanzzen.github.io/feed.xml</id><title type="html">Eddrich Janzzen</title><subtitle>Personal Blog</subtitle><author><name>Eddrich Janzzen Ang</name><email>eddrichang@gmail.com</email></author><entry><title type="html">Github: Support for password authentication was removed</title><link href="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html" rel="alternate" type="text/html" title="Github: Support for password authentication was removed" /><published>2021-08-29T00:00:00+00:00</published><updated>2021-08-29T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html">&lt;h4 id=&quot;password-authentication-was-removed&quot;&gt;Password authentication was removed&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://eddrichjanzzen.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://eddrichjanzzen.github.io/" rel="alternate" type="text/html" /><updated>2021-08-30T05:42:28+00:00</updated><id>https://eddrichjanzzen.github.io/feed.xml</id><title type="html">Eddrich Janzzen</title><subtitle>Personal Blog</subtitle><author><name>Eddrich Janzzen Ang</name><email>eddrichang@gmail.com</email></author><entry><title type="html">Github: Support for password authentication was removed</title><link href="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html" rel="alternate" type="text/html" title="Github: Support for password authentication was removed" /><published>2021-08-29T00:00:00+00:00</published><updated>2021-08-29T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/08/29/support-for-password-authentication-removed.html">&lt;h4 id=&quot;password-authentication-was-removed&quot;&gt;Password authentication was removed&lt;/h4&gt;
 
 &lt;p&gt;Recently, I’ve been trying to clone a repository on &lt;a href=&quot;github.com&quot;&gt;Github&lt;/a&gt;. I ran into an issue where I couldn’t clone the repository because password authentication is no longer supported.&lt;/p&gt;
 
@@ -17,63 +17,38 @@ remote: Please see https://github.blog/2020-12-15-token-authentication-requireme
 &lt;h4 id=&quot;generating-a-personal-access-token&quot;&gt;Generating a personal access token&lt;/h4&gt;
 
 &lt;p&gt;Follow these steps to generate a personal access token. Make sure to keep note of the generated personal access token as this will be used in the succeeding steps.&lt;/p&gt;
-&lt;blockquote&gt;
 
-  &lt;h5 id=&quot;1-on-the-github-dashboard-click-on-settings&quot;&gt;1. On the Github dashboard, click on Settings.&lt;/h5&gt;
+&lt;h5 id=&quot;1-on-the-github-dashboard-click-on-settings&quot;&gt;1. On the Github dashboard, click on Settings.&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;2-click-on-developer-settings&quot;&gt;2. Click on Developer Settings&lt;/h5&gt;
 
-  &lt;h5 id=&quot;2-click-on-developer-settings&quot;&gt;2. Click on Developer Settings&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/developer-settings.png&quot; alt=&quot;developer-settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/developer-settings.png&quot; alt=&quot;developer-settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;3-click-on-personal-access-tokens&quot;&gt;3. Click on Personal access tokens&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/personal-access-token.png&quot; alt=&quot;personal-access-tokens&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;3-click-on-personal-access-tokens&quot;&gt;3. Click on Personal access tokens&lt;/h5&gt;
+&lt;h5 id=&quot;4-click-on-generate-new-token&quot;&gt;4. Click on Generate new token&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/personal-access-token.png&quot; alt=&quot;personal-access-tokens&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-new-token.png&quot; alt=&quot;generate-new-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;5-enter-password&quot;&gt;5. Enter password&lt;/h5&gt;
 
-  &lt;h5 id=&quot;4-click-on-generate-new-token&quot;&gt;4. Click on Generate new token&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/enter-password.png&quot; alt=&quot;enter-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-new-token.png&quot; alt=&quot;generate-new-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;5-enter-password&quot;&gt;5. Enter password&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/enter-password.png&quot; alt=&quot;enter-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;6-add-a-note-for-the-token-configure-expiry-and-the-allowed-permissions&quot;&gt;6. Add a note for the token, configure expiry and the allowed permissions.&lt;/h5&gt;
-
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;6-add-a-note-for-the-token-configure-expiry-and-the-allowed-permissions&quot;&gt;6. Add a note for the token, configure expiry and the allowed permissions.&lt;/h5&gt;
 
 &lt;p&gt;In this example, we are leaving all the persmissions is checked, and with no expiry&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/token-configuration.png&quot; alt=&quot;token-configuration&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;7-click-on-generate-token&quot;&gt;7. Click on Generate Token&lt;/h5&gt;
 
-  &lt;h5 id=&quot;7-click-on-generate-token&quot;&gt;7. Click on Generate Token&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-token-button.png&quot; alt=&quot;generate-token-button&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/generate-token-button.png&quot; alt=&quot;generate-token-button&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;8-copy-the-token&quot;&gt;8. Copy the token&lt;/h5&gt;
-
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;8-copy-the-token&quot;&gt;8. Copy the token&lt;/h5&gt;
 
 &lt;p&gt;Copy the token. Store it somewhere safe where only you can access it. You will need this personal token in the next step.&lt;/p&gt;
 
@@ -82,80 +57,48 @@ remote: Please see https://github.blog/2020-12-15-token-authentication-requireme
 &lt;h4 id=&quot;using-the-personal-token-instead-of-password&quot;&gt;Using the Personal Token instead of password&lt;/h4&gt;
 &lt;p&gt;If this is your &lt;strong&gt;first time ever&lt;/strong&gt; to clone a respository in Github then follow these steps. If not, then proceed to the instructions on: Replacing the Credentials in Keychain access, below.&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;1-re-clone-the-respository&quot;&gt;1. Re-clone the respository.&lt;/h5&gt;
 
-  &lt;h5 id=&quot;1-re-clone-the-respository&quot;&gt;1. Re-clone the respository.&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/re-clone.png&quot; alt=&quot;re-clone&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/re-clone.png&quot; alt=&quot;re-clone&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;2-paste-the-personal-access-token-in-the-password-prompt&quot;&gt;2. Paste the personal access token in the password prompt&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/paste-personal-token.png&quot; alt=&quot;paste-personal-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;2-paste-the-personal-access-token-in-the-password-prompt&quot;&gt;2. Paste the personal access token in the password prompt&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/paste-personal-token.png&quot; alt=&quot;paste-personal-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;3-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;3. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/clone-success.png&quot; alt=&quot;clone-success&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;3-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;3. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/clone-success.png&quot; alt=&quot;clone-success&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;replacing-the-credentials-in-keychain-access&quot;&gt;Replacing the Credentials in Keychain access&lt;/h4&gt;
 
 &lt;p&gt;If you’ve &lt;strong&gt;cloned a few repositories&lt;/strong&gt; before in Github, it’s likely that your credentials are already stored in the Keychain. Follow these steps to configure Keychain Access.&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;1-open-keychain-access&quot;&gt;1. Open Keychain access.&lt;/h5&gt;
 
-  &lt;h5 id=&quot;1-open-keychain-access&quot;&gt;1. Open Keychain access.&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/spotlight-keychain-access.png&quot; alt=&quot;keychain-access&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/spotlight-keychain-access.png&quot; alt=&quot;keychain-access&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;2-on-keychain-access-search-git&quot;&gt;2. On Keychain Access, search &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/search-git.png&quot; alt=&quot;search-git&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;2-on-keychain-access-search-git&quot;&gt;2. On Keychain Access, search &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&quot;3-click-on-githubcom&quot;&gt;3. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.com&lt;/code&gt;&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/search-git.png&quot; alt=&quot;search-git&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/click-github.png&quot; alt=&quot;click-github&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;4-tick-the-checkbox-show-password&quot;&gt;4. Tick the checkbox &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show password&lt;/code&gt;.&lt;/h5&gt;
 
-  &lt;h5 id=&quot;3-click-on-githubcom&quot;&gt;3. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github.com&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/keychain-access-password.png&quot; alt=&quot;keychain-access-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/click-github.png&quot; alt=&quot;click-github&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;5-enter-system-password-then-click-on-always-allow&quot;&gt;5. Enter system password, then click on Always allow&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/always-allow.png&quot; alt=&quot;always-allow&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;4-tick-the-checkbox-show-password&quot;&gt;4. Tick the checkbox &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;show password&lt;/code&gt;.&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/keychain-access-password.png&quot; alt=&quot;keychain-access-password&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;5-enter-system-password-then-click-on-always-allow&quot;&gt;5. Enter system password, then click on Always allow&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/always-allow.png&quot; alt=&quot;always-allow&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;6-paste-the-token-into-the-password-field&quot;&gt;6. Paste the Token into the password field&lt;/h5&gt;
-
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;6-paste-the-token-into-the-password-field&quot;&gt;6. Paste the Token into the password field&lt;/h5&gt;
 
 &lt;p&gt;Copy the token from the previous guide on generating a personal access token. Then paste it in the input as seen below:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/github-auth-error/paste-token.png&quot; alt=&quot;paste-token&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;7-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;7. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
-
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;7-congratulations-you-have-successfully-cloned-the-repository&quot;&gt;7. Congratulations, you have successfully cloned the repository&lt;/h5&gt;
 
 &lt;p&gt;Re-clone the repository&lt;/p&gt;
 
@@ -246,38 +189,24 @@ Invariant Violation: &lt;span class=&quot;s2&quot;&gt;&quot;gap&quot;&lt;/span&g
 &lt;p&gt;Javascipt XML or &lt;a href=&quot;https://www.w3schools.com/react/react_jsx.asp#:~:text=JSX%20stands%20for%20JavaScript%20XML,and%20add%20HTML%20in%20React.&quot;&gt;JSX&lt;/a&gt; is a syntax extension to Javascript, which mainly used in developing components in React. Although VS code comes with Emmet out of the box, it does not immediately support JSX.&lt;/p&gt;
 
 &lt;p&gt;The good news is, you can enable Emmet for React using following steps:&lt;/p&gt;
-&lt;blockquote&gt;
 
-  &lt;h5 id=&quot;1-go-to-the-settings-page-in-vs-code&quot;&gt;1. Go to the settings page in VS Code&lt;/h5&gt;
+&lt;h5 id=&quot;1-go-to-the-settings-page-in-vs-code&quot;&gt;1. Go to the settings page in VS Code&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/settings-page.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/settings-page.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;2-go-to-the-workspace-settings-tab&quot;&gt;2. Go to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Workspace Settings&lt;/code&gt; tab&lt;/h5&gt;
 
-  &lt;h5 id=&quot;2-go-to-the-workspace-settings-tab&quot;&gt;2. Go to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Workspace Settings&lt;/code&gt; tab&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/workspace-settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/workspace-settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;3-under-extensions-look-for-emmet&quot;&gt;3. Under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Extensions&lt;/code&gt; look for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Emmet&lt;/code&gt;&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/emmet-boxed.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;3-under-extensions-look-for-emmet&quot;&gt;3. Under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Extensions&lt;/code&gt; look for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Emmet&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&quot;4-click-on-edit-in-settingsjson&quot;&gt;4. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Edit in settings.json&quot;&lt;/code&gt;&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/emmet-boxed.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;4-click-on-edit-in-settingsjson&quot;&gt;4. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Edit in settings.json&quot;&lt;/code&gt;&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/settings.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;5-add-the-following-lines-of-code-to-settingsjson&quot;&gt;5. Add the following lines of code to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;settings.json&quot;&lt;/code&gt;&lt;/h5&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;5-add-the-following-lines-of-code-to-settingsjson&quot;&gt;5. Add the following lines of code to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;settings.json&quot;&lt;/code&gt;&lt;/h5&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;emmet.includeLanguages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -293,33 +222,21 @@ Invariant Violation: &lt;span class=&quot;s2&quot;&gt;&quot;gap&quot;&lt;/span&g
 
 &lt;p&gt;To install Prettier you can follow these steps:&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;1-in-the-side-panel-click-on-the-extensions-icon&quot;&gt;1. In the side panel click on the Extensions icon&lt;/h5&gt;
 
-  &lt;h5 id=&quot;1-in-the-side-panel-click-on-the-extensions-icon&quot;&gt;1. In the side panel click on the Extensions icon&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/extensions.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/extensions.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5 id=&quot;2-in-the-search-bar-search-for-prettier&quot;&gt;2. In the search bar, search for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Prettier&lt;/code&gt;&lt;/h5&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/search-prettier.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-  &lt;h5 id=&quot;2-in-the-search-bar-search-for-prettier&quot;&gt;2. In the search bar, search for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Prettier&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&quot;3-install-pretter&quot;&gt;3. Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pretter&lt;/code&gt;&lt;/h5&gt;
 
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/search-prettier.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/install-prettier.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;h5 id=&quot;4-to-verify-prettier-is-installed-you-should-see-the-following-on-the-bottom-of-the-code-editor&quot;&gt;4. To verify prettier is installed, you should see the following on the bottom of the code editor&lt;/h5&gt;
 
-  &lt;h5 id=&quot;3-install-pretter&quot;&gt;3. Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pretter&lt;/code&gt;&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/install-prettier.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-
-  &lt;h5 id=&quot;4-to-verify-prettier-is-installed-you-should-see-the-following-on-the-bottom-of-the-code-editor&quot;&gt;4. To verify prettier is installed, you should see the following on the bottom of the code editor&lt;/h5&gt;
-
-  &lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/prettier-verify.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/vs-code-react/prettier-verify.png&quot; alt=&quot;settings&quot; class=&quot;img-blog&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Success! Prettier has now been installed!! :raised_hands: :clap:&lt;/p&gt;</content><author><name>eddrichjanzzen</name></author><category term="blog" /><category term="tech" /><category term="react" /><summary type="html">Recently, I’ve been looking into learning React. React is javascript library developed and maintained by Facebook. It is mainly used to create user interfaces, but can also be used to build mobile applications.</summary></entry><entry><title type="html">Jekyll: index.html not rendering in page, Index of /page_name/</title><link href="https://eddrichjanzzen.github.io/blog/2021/04/03/jekyll-page-index-not-showing.html" rel="alternate" type="text/html" title="Jekyll: index.html not rendering in page, Index of /page_name/" /><published>2021-04-03T00:00:00+00:00</published><updated>2021-04-03T00:00:00+00:00</updated><id>https://eddrichjanzzen.github.io/blog/2021/04/03/jekyll-page-index-not-showing</id><content type="html" xml:base="https://eddrichjanzzen.github.io/blog/2021/04/03/jekyll-page-index-not-showing.html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is an amazing tool for building static websites. What I love about Jekyll is that you can easily deploy a simple website without the need for a database. &lt;img src=&quot;/assets/images/blog/jekyll.png&quot; alt=&quot;jekyll&quot; class=&quot;img-blog-right&quot; /&gt; You can also host it for free using &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; which makes process way more convenient.&lt;/p&gt;
 
