@@ -12,6 +12,10 @@ pre {
   -o-tab-size: 2; /* Opera 11.5 & 12.1 only */
   tab-size: 2; /* Chrome 21+, Safari 6.1+, Opera 15+ */
   line-height: normal;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 nav {
