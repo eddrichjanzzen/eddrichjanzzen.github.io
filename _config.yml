@@ -16,7 +16,9 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-
+# Conversion
+markdown: kramdown
+highlighter: rouge
 
 # About/contact
 author:
