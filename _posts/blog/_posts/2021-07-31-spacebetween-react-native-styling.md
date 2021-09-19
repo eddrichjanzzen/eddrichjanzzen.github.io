@@ -12,7 +12,7 @@ description: "An article that describes a solution to add equal spacing between 
 
 ##### Learn once, write anywhere.
 
-[React Native](https://reactnative.dev/) is an amazing tool for writing cross plaform applications. If you're thinking about building an application with the the capability to support multiple platforms, then this is the tool for you! :raised_hands:
+[React Native](https://reactnative.dev/) is an amazing tool for writing cross plaform applications. If you're thinking about building applications with the the capability to support multiple platforms, then this is the tool for you! :raised_hands:
 
 Recently, I've been working on a feature that diplays a list of elements into the view port in a grid-style format. At first, I was able to solve the issue by adding the `grid-gap` property to the styles prop like so:
 
