@@ -1,5 +1,5 @@
 ---
-title: "Wait for database to finish before running application in with docker-compose"
+title: "Wait for database to finish before running application in docker-compose"
 layout: blog-specific
 author: eddrichjanzzen
 date: 2022-03-31
@@ -7,6 +7,7 @@ category: blog
 tags:
   - tech
   - django
+  - python
 description: "An article that describes a solution for raise conditions when running an application with a database in docker"
 ---
 
