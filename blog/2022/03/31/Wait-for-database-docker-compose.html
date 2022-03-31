@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  
+  <head>
+  <meta charset="utf-8">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Wait for database to finish before running application in with docker-compose | Eddrich Janzzen</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Wait for database to finish before running application in with docker-compose" />
+<meta name="author" content="eddrichjanzzen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An article that describes a solution for raise conditions when running an application with a database in docker" />
+<meta property="og:description" content="An article that describes a solution for raise conditions when running an application with a database in docker" />
+<link rel="canonical" href="https://eddrichjanzzen.github.io/blog/2022/03/31/Wait-for-database-docker-compose.html" />
+<meta property="og:url" content="https://eddrichjanzzen.github.io/blog/2022/03/31/Wait-for-database-docker-compose.html" />
+<meta property="og:site_name" content="Eddrich Janzzen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-31T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Wait for database to finish before running application in with docker-compose","dateModified":"2022-03-31T00:00:00+00:00","datePublished":"2022-03-31T00:00:00+00:00","url":"https://eddrichjanzzen.github.io/blog/2022/03/31/Wait-for-database-docker-compose.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://eddrichjanzzen.github.io/blog/2022/03/31/Wait-for-database-docker-compose.html"},"author":{"@type":"Person","name":"eddrichjanzzen"},"description":"An article that describes a solution for raise conditions when running an application with a database in docker","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100;400" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/skeleton-alerts.css">
+  <link rel="stylesheet" href="/assets/css/badge.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <!-- for syntax highlighting -->
+  <link rel="stylesheet" href="/assets/css/tango.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- for category filtering-->
+  <script src="/assets/js/jquery-3.1.1.min.js"></script> 
+
+  <meta name="google-site-verification" content="y76HL_x2Anjbw7oIO9lswptVVKHz5NHCzh8Dz9Rp4FI" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171515307-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-171515307-1');
+  </script>
+
+  
+</head>
+
+
+<body>
+
+  <header>
+    <nav>
+	
+	<div class="hamburger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	
+	
+	<ul class="clearfix nav-top">
+	<!-- <ul class="open nav-top"> -->
+		<li><a href="/index.html">Home</a></li>
+    <li><a href="/posts">Posts</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="https://github.com/eddrichjanzzen" target="_blank">GitHub</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>
+
+
+<!-- https://www.youtube.com/watch?v=6m6iqN1uynE -->
+
+  </header>
+
+
+  <div class="content-wrapper">
+    <h3>Wait for database to finish before running application in with docker-compose</h3>
+<span>Posted on Mar 31, 2022 • eddrichjanzzen
+</span>
+<div>    
+  
+    <a class="badge badge-secondary" href="/posts/tech">
+      <i class="fas fa-tags"></i>
+      tech
+    </a>
+  
+    <a class="badge badge-secondary" href="/posts/django">
+      <i class="fas fa-tags"></i>
+      django
+    </a>
+  
+</div>
+<br>
+
+<div class="blog-wrapper">
+	<h5 id="application-container-runs-before-the-database-is-ready">Application container runs before the database is ready</h5>
+
+<p>Recently, I’ve started building a new project with <a href="https://www.djangoproject.com/">Django</a> in conjunction with docker. I am using <code class="language-plaintext highlighter-rouge">docker-compose</code> to manage two services namely, the django application and the database (postgresql). I ran into an issue where sometimes the django application container runs before the database is ready. This causes an error where the django application is unable to connect to the database as seen below:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kalender-api-web-1  |     connection <span class="o">=</span> Database.connect<span class="o">(</span><span class="k">**</span>conn_params<span class="o">)</span>
+kalender-api-web-1  |   File <span class="s2">"/usr/local/lib/python3.8/site-packages/psycopg2/__init__.py"</span>, line 122, <span class="k">in </span>connect
+kalender-api-web-1  |     conn <span class="o">=</span> _connect<span class="o">(</span>dsn, <span class="nv">connection_factory</span><span class="o">=</span>connection_factory, <span class="k">**</span>kwasync<span class="o">)</span>
+kalender-api-web-1  | django.db.utils.OperationalError: connection to server at <span class="s2">"db"</span> <span class="o">(</span>172.29.0.2<span class="o">)</span>, port 5432 failed: FATAL:  the database system is starting up
+kalender-api-web-1  |
+kalender-api-db-1   | 2022-03-31 13:26:42.168 UTC <span class="o">[</span>25] LOG:  database system was not properly shut down<span class="p">;</span> automatic recovery <span class="k">in </span>progress
+kalender-api-db-1   | 2022-03-31 13:26:42.175 UTC <span class="o">[</span>25] LOG:  redo starts at 0/17737E0
+kalender-api-db-1   | 2022-03-31 13:26:42.175 UTC <span class="o">[</span>25] LOG:  invalid record length at 0/1773818: wanted 24, got 0
+kalender-api-db-1   | 2022-03-31 13:26:42.175 UTC <span class="o">[</span>25] LOG:  redo <span class="k">done </span>at 0/17737E0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+kalender-api-db-1   | 2022-03-31 13:26:42.212 UTC <span class="o">[</span>1] LOG:  database system is ready to accept connections
+
+</code></pre></div></div>
+
+<p>Although this issue happens intermittently, restarting docker-compose everytime this happens can get quite tedious especially if you’re working on the application on a day to day basis. 🥵</p>
+
+<p>So, is there anything we can do to tell the django application to wait for the database? 🤔</p>
+
+<h5 id="solution">Solution</h5>
+
+<p>After some research, I found that <code class="language-plaintext highlighter-rouge">docker-compose</code> actually supports healthchecks. A healthcheck is essentially a way to validate if a service is running. We are able to check if a specific container is healthy given some condition. We achieve this by using <code class="language-plaintext highlighter-rouge">depends_on</code> in conjunction with <code class="language-plaintext highlighter-rouge">healthcheck</code> as follows:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.9"</span>
+   
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">web</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">.:/code</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8000:8000"</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="na">db</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_healthy</span> 
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+  <span class="na">db</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">postgres</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">POSTGRES_DB=postgres</span>
+      <span class="pi">-</span> <span class="s">POSTGRES_USER=postgres</span>
+      <span class="pi">-</span> <span class="s">POSTGRES_PASSWORD=postgres</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">pgdata:/var/lib/postgresql/data</span>
+    <span class="na">ports</span><span class="pi">:</span> 
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">5432:5432"</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">CMD-SHELL"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">pg_isready"</span><span class="pi">]</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">5s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">5</span>
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">pgdata</span><span class="pi">:</span>
+
+</code></pre></div></div>
+
+<p>In the example above, the healthcheck property has a condition to check if the <code class="language-plaintext highlighter-rouge">service_healthy</code>. We are testing for the condition “pg_isready” and if the database is ready, that’s the only time the django application container starts running.</p>
+
+<p>I really hope this short article will be of help to anyone who encounters a similar issue. <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> <img class="emoji" title=":thumbsup:" alt=":thumbsup:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+
+<h5 id="sources">Sources:</h5>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y">https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y</a></li>
+  <li><a href="https://github.com/peter-evans/docker-compose-healthcheck">https://github.com/peter-evans/docker-compose-healthcheck</a></li>
+</ul>
+	
+</div>
+
+  <div>
+  
+  <footer>
+    
+<footer class="footer">
+	<nav>
+	
+	
+	<ul class="clearfix nav-bottom">
+	<!-- <ul class="open nav-top"> -->
+		<li><a href="/index.html">Home</a></li>
+    <li><a href="/posts">Posts</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="https://github.com/eddrichjanzzen" target="_blank">GitHub</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>
+
+
+<!-- https://www.youtube.com/watch?v=6m6iqN1uynE -->
+
+	<div class="mini">
+		<img src="/assets/images/me.jpg" alt="">
+		<p>Developed by <a href="https://github.com/eddrichjanzzen">Eddrich Janzzen Ang</a> powered by <a href="https://jekyllrb.com/">Jekyll</a></p>	
+	</div>
+</footer>
+
+
+  <footer>
+
+</footer></footer>
+</div>
+</div></body>
+<script src="/assets/js/main.js"></script>
+</html>

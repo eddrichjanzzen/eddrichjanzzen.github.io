@@ -253,6 +253,10 @@
 <lastmod>2021-09-19T00:00:00+00:00</lastmod>
 </url>
 <url>
+<loc>https://eddrichjanzzen.github.io/blog/2022/03/31/Wait-for-database-docker-compose.html</loc>
+<lastmod>2022-03-31T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://eddrichjanzzen.github.io/404</loc>
 </url>
 <url>
@@ -272,12 +276,6 @@
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/posts/dotnet/</loc>
-</url>
-<url>
-<loc>https://eddrichjanzzen.github.io/projects/</loc>
-</url>
-<url>
-<loc>https://eddrichjanzzen.github.io/projects/page/2/</loc>
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/uva/</loc>
@@ -307,6 +305,12 @@
 <loc>https://eddrichjanzzen.github.io/uva/page/9/</loc>
 </url>
 <url>
+<loc>https://eddrichjanzzen.github.io/projects/</loc>
+</url>
+<url>
+<loc>https://eddrichjanzzen.github.io/projects/page/2/</loc>
+</url>
+<url>
 <loc>https://eddrichjanzzen.github.io/posts/jekyll/</loc>
 </url>
 <url>
@@ -317,6 +321,9 @@
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/posts/3/</loc>
+</url>
+<url>
+<loc>https://eddrichjanzzen.github.io/posts/4/</loc>
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/posts/python/</loc>
@@ -332,6 +339,9 @@
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/posts/tech/3/</loc>
+</url>
+<url>
+<loc>https://eddrichjanzzen.github.io/posts/tech/4/</loc>
 </url>
 <url>
 <loc>https://eddrichjanzzen.github.io/posts/terraform/</loc>
